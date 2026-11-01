@@ -1,0 +1,38 @@
+name: CSCommands
+version: '${version}'
+main: org.CSCommands.CSCommandPlugin
+api-version: '1.21'
+author: Z3R0P01NT
+description: Command interceptor for duel system integration
+
+load: STARTUP
+loadbefore:
+  - StrikePractice
+  - PvPManager
+  - KitPvP
+
+commands:
+  pduel:
+    description: Process duel command with stored data
+    usage: /pduel %CSCDATA_PlayerName% <gamemode> <kit>
+    permission: cscommands.pduel
+  cscommand:
+    description: CS Command main command
+    usage: /cscommand [reload|info]
+    permission: cscommands.admin
+    aliases: [csc, cs]
+  csdebug:
+    description: Debug command for troubleshooting
+    usage: /csdebug [info|test|sudo|storage]
+    permission: cscommands.admin
+
+permissions:
+  cscommands.use:
+    description: Basic CS Command usage
+    default: true
+  cscommands.pduel:
+    description: Use pduel command
+    default: true
+  cscommands.admin:
+    description: Administrative commands
+    default: op

@@ -1,0 +1,21 @@
+# CSCommands Plugin Configuration
+commands:
+  # Command to execute when opening the menu
+  menu-command: "mduel"
+  # Final duel command to execute after kit selection
+  final-duel-command: "1v1"
+
+messages:
+  # Enable or disable all plugin messages
+  enabled: true
+  # Message sent when duel is intercepted
+  duel-intercepted: "§aDuel request sent to %target%! Select your kit."
+  # Usage message for /duel command
+  usage: "§cUsage: /duel <playername>"
+  # Message when no duel data is found
+  no-data: "§cNo duel data found. Please use /duel <playername> first."
+
+# Plugin settings
+settings:
+  # Time in milliseconds before duel request expires (5 minutes = 300000ms)
+  duel-expiry-time: 300000
